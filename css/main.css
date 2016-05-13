@@ -1,0 +1,42 @@
+
+/*
+ * Generic attributes
+ */
+ 
+ * {
+	 margin: 0;
+ }
+ 
+html, body, div, span, applet, h1, h2, h3, h4, h5, h6, p, a, img{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+img{
+	width: 100%;
+}
+
+/*
+ * General sections
+ */
+
+#banner{
+	width: 100%;
+}
+
+#content{
+	width: 60%;
+	margin: auto;
+}
