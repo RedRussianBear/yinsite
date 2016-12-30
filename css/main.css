@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant|Libre+Baskerville');
 
-/*
- * Generic attributes
- */
- 
- * {
-	 margin: 0;
- }
- 
-html, body, div, span, applet, h1, h2, h3, h4, h5, h6, p, a, img{
+/*CSS RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -16,27 +22,92 @@ html, body, div, span, applet, h1, h2, h3, h4, h5, h6, p, a, img{
 	vertical-align: baseline;
 }
 
-html{
-	height: 100%;
-}
-
 body{
-	overflow-x: hidden;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #ecf0f1;
 }
 
-img{
-	width: 100%;
+#border-container{
+    height:100vh;
+    width: 100vw;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    
+    z-index: 99999;
+    pointer-events: none;
 }
 
-/*
- * General sections
- */
+#border-box{
+    height: 95%;
+    width: 95%;
+    border: 5px solid #ecf0f1;
+}
+
+.sec1{
+    border-color: #e72c3c !important;
+    transition: all 0.4s linear;
+}
+
+#header{
+    width: 100%;
+}
+
+#header img{
+    height: 32px;
+    width: 32px;
+    margin:5px;
+    -webkit-filter: grayscale(100%) brightness(200%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) brightness(200%);
+    pointer-events: all;
+}
+
+.colorize{
+    -webkit-filter: none !important; /* Safari 6.0 - 9.0 */
+    filter: none !important;
+    transition: all 0.4s linear;
+}
 
 #banner{
-	width: 100%;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+    background-image: url(/images/poli_banner.jpg);
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
 }
 
-#content{
-	width: 60%;
-	margin: auto;
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Libre Baskerville','Cormorant', serif;
+}
+
+h1{
+    font-size:64pt;
+}
+
+h2{
+    font-size: 24pt;
+}
+
+#redden{
+    background-color: #ecf0f1;
+    width: 90%;
+    height: 100vh;
+    padding-right: 5%;
+    padding-left: 5%;
+    overflow-x: hidden;
 }
