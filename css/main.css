@@ -152,6 +152,27 @@ h4{
     overflow-x: hidden;
 }
 
+#links {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+	text-align: center;
+}
+
+#links a {
+	
+	font-weight: bold;
+	text-decoration: none;
+	color: #2c3e50;
+}
+
+#links a:hover {
+	color: #a0a0a0;
+}
+
+
 .policy-card {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     height: 256px;
