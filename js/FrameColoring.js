@@ -25,7 +25,7 @@ $("section").each(function() {
         .addTo(ctrl);
     }
     
-    new ScrollMagic.Scene({
+    /*new ScrollMagic.Scene({
         triggerElement: this
     })
     .addIndicators({
@@ -35,7 +35,7 @@ $("section").each(function() {
         name:name
     }) 
     .addTo(ctrl);
-    
+    */
 });
 
 /*
