@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant|Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/*CSS RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #ecf0f1;
+}
+
+#border-container{
+    height:100vh;
+    width: 100vw;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    
+    z-index: 99999;
+    pointer-events: none;
+}
+
+#border-box{
+    height: 95%;
+    width: 95%;
+    border: 5px solid #ecf0f1;
+    
+    transition: all 0.4s linear;
+}
+
+.sec1{
+    border-color: #e72c3c !important;
+    transition: all 0.4s linear;
+}
+
+#header{
+    width: 100%;
+}
+
+#header img{
+    height: 32px;
+    width: 32px;
+    margin:5px;
+    -webkit-filter: grayscale(100%) brightness(200%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) brightness(200%);
+    pointer-events: all;
+    
+    transition: all 0.4s linear;
+}
+
+#hamburger{
+    cursor: pointer;
+    cursor: hand;
+}
+
+#menu{
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0px;
+    transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    background-color: #ecf0f1;
+    z-index: -9999;
+}
+
+#menu-container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.expand-menu{
+    width: 100% !important;
+    transition: all 0.4s linear;
+}
+
+.colorize{
+    -webkit-filter: none !important; /* Safari 6.0 - 9.0 */
+    filter: none !important;
+    transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+#banner{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+    background-image: url(../images/poli_banner.jpg);
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lato','Cormorant', serif;
+    
+}
+
+h1{
+    font-size:64pt;
+}
+
+h2{
+    font-size: 24pt;
+}
+
+h3{
+    font-size: 20pt;
+}
+
+h4{
+    font-size: 16pt;
+}
+
+#redden{
+    background-color: #ecf0f1;
+    width: 90%;
+    height: 100vh;
+    padding-right: 5%;
+    padding-left: 5%;
+    overflow-x: hidden;
+}
+
+.policy-card {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    height: 256px;
+    width: 256px;
+    background-color: #ffffff;
+    padding: 10px;
+    position: relative;
+    
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.policy-card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.policy-card a{
+    text-decoration: underline;
+    color: #3498db;
+    font-family: 'Lato';
+}
+
+.policy-card button{
+    height: 40px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    
+    border: none;
+    outline: none;
+    font-weight: 200;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    position: absolute;
+    bottom: 10px;
+
+    font-size: 14pt;
+}
+
+
+
+
+#contact-form {
+  max-width: 90%;
+  margin: 0 auto;
+font-family: 'Lato';
+    text-align: center;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 1);
+}
+
+#contact-form label {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#contact-form textarea,
+input {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  text-align: center;
+  background: none;
+  font-weight: 700;
+  font-family: 'Lato', georgia;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 1);
+  max-width: 90%;
+  padding: 1rem;
+  border: 2px dashed rgba(255, 255, 255, 0);
+  box-sizing: border-box;
+  cursor: text;
+}
+
+#contact-form textarea {
+  text-align: left;
+  /* overflow:hidden; */
+  
+  resize: none;
+  width: 90%;
+  border-color: rgba(255, 255, 255, 0)
+}
+
+#contact-form textarea:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px dashed rgba(255, 255, 255, 1);
+}
+
+#contact-form textarea:focus:required:valid {
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#contact-form textarea:required:valid {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#contact-form input {
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+#contact-form input:required,
+textarea:required {
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+#contact-form input:focus {
+  border-bottom: 2px dashed rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#contact-form input:required:valid {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#contact-form input:required:invalid {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#contact-form ::-webkit-input-placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+#contact-form :-moz-placeholder {
+  /* Firefox 18- */
+  
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+#contact-form ::-moz-placeholder {
+  /* Firefox 19+ */
+  
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+#contact-form :-ms-input-placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+#contact-form .expanding {
+  vertical-align: top;
+}
+
+#contact-form .send-icn {
+  fill: rgba(255, 255, 255, 1)
+}
+
+#contact-form .send-icn:hover {
+  fill: rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+#contact-form button {
+  background: none;
+  border: none;
+  outline: none;
+  margin: 2vmax;
+}
+
+#contact-form button:hover small {
+  opacity: 1;
+}
+
+#contact-form small {
+  display: block;
+  opacity: 0;
+}
+
+#contact-form .website {
+  opacity: 1;
+  font-size: 16px;
+  color: white;
+  position: relative;
+  text-align: center;
+  display: block;
+  margin-top: 7%;
+  
+}
+
+#contact-form .website a {
+  color: white;
+}
