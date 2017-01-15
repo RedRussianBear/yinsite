@@ -22,15 +22,39 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+/*GENERAL*/
 body{
-    min-height: 100vh;
-    min-width: 100vw;
+    min-height: 100%;
+    min-width: 100%;
     background-color: #ecf0f1;
+    overflow-x: none;
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lato','Cormorant', serif;
+    
+}
+
+h1{
+    font-size:64pt;
+}
+
+h2{
+    font-size: 24pt;
+}
+
+h3{
+    font-size: 20pt;
+}
+
+h4{
+    font-size: 16pt;
+}
+
+/*HEADER and BORDER*/
 #border-container{
-    height:100vh;
-    width: 100vw;
+    height:100%;
+    width: 100%;
     
     display: flex;
     flex-direction: row;
@@ -44,9 +68,13 @@ body{
 }
 
 #border-box{
-    height: 95%;
-    width: 95%;
-    border: 5px solid #ecf0f1;
+    width: -webkit-calc(100% - 40px);
+    width:    -moz-calc(100% - 40px);
+    width:         calc(100% - 40px);
+    height: -webkit-calc(100% - 40px);
+    height:    -moz-calc(100% - 40px);
+    height:         calc(100% - 40px);
+    border: 10px solid #ecf0f1;
     
     transition: all 0.4s linear;
 }
@@ -61,8 +89,8 @@ body{
 }
 
 #header img{
-    height: 32px;
-    width: 32px;
+    height: 48px;
+    width: 48px;
     margin:5px;
     -webkit-filter: grayscale(100%) brightness(200%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%) brightness(200%);
@@ -107,8 +135,10 @@ body{
 
 #banner{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
+    margin: none;
+    
     background-image: url(../images/poli_banner.jpg);
     background-size: cover;
     
@@ -121,28 +151,6 @@ body{
     text-align: center;
 }
 
-
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Lato','Cormorant', serif;
-    
-}
-
-h1{
-    font-size:64pt;
-}
-
-h2{
-    font-size: 24pt;
-}
-
-h3{
-    font-size: 20pt;
-}
-
-h4{
-    font-size: 16pt;
-}
-
 #redden{
     background-color: #ecf0f1;
     width: 90%;
@@ -152,26 +160,7 @@ h4{
     overflow-x: hidden;
 }
 
-#links {
-	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-	text-align: center;
-}
-
-#links a {
-	
-	font-weight: bold;
-	text-decoration: none;
-	color: #2c3e50;
-}
-
-#links a:hover {
-	color: #a0a0a0;
-}
-
+/*POLICY*/
 
 .policy-card {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -211,158 +200,172 @@ h4{
     font-size: 14pt;
 }
 
+/*FOOTER*/
 
+#footer{
+    background-color: #2c3e50;
+    -webkit-box-shadow: 0px -10px 5px 0px rgba(68,68,68,0.37);
+    -moz-box-shadow: 0px -10px 5px 0px rgba(68,68,68,0.37);
+    box-shadow: 0px -10px 5px 0px rgba(68,68,68,0.37);
+}
 
+#footer i{
+    color: #ffffff;
+}
 
 #contact-form {
-  max-width: 90%;
-  margin: 0 auto;
-font-family: 'Lato';
+    max-width: 90%;
+    margin: 0 auto;
+    font-family: 'Lato';
     text-align: center;
     font-size: 25px;
     color: rgba(255, 255, 255, 1);
 }
 
 #contact-form label {
-  font-weight: 400;
-  cursor: pointer;
+    font-weight: 400;
+    cursor: pointer;
 }
 
 #contact-form textarea,
 input {
-  border: none;
-  outline: none;
-  border-radius: 0;
-  text-align: center;
-  background: none;
-  font-weight: 700;
-  font-family: 'Lato', georgia;
-  font-size: 25px;
-  color: rgba(255, 255, 255, 1);
-  max-width: 90%;
-  padding: 1rem;
-  border: 2px dashed rgba(255, 255, 255, 0);
-  box-sizing: border-box;
-  cursor: text;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    text-align: center;
+    background: none;
+    font-weight: 700;
+    font-family: 'Lato', georgia;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 1);
+    max-width: 90%;
+    padding: 1rem;
+    border: 2px dashed rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    cursor: text;
 }
 
 #contact-form textarea {
-  text-align: left;
-  /* overflow:hidden; */
-  
-  resize: none;
-  width: 90%;
-  border-color: rgba(255, 255, 255, 0)
+    text-align: left;
+    /* overflow:hidden; */
+
+    resize: none;
+    width: 90%;
+    border-color: rgba(255, 255, 255, 0)
 }
 
 #contact-form textarea:focus {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 2px dashed rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px dashed rgba(255, 255, 255, 1);
 }
 
 #contact-form textarea:focus:required:valid {
-  border: 2px solid rgba(255, 255, 255, 0);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 #contact-form textarea:required:valid {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 #contact-form input {
-  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
 }
 
 #contact-form input:required,
 textarea:required {
-  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
 }
 
 #contact-form input:focus {
-  border-bottom: 2px dashed rgba(255, 255, 255, 1);
-  background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 2px dashed rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 #contact-form input:required:valid {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 #contact-form input:required:invalid {
-  color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 #contact-form ::-webkit-input-placeholder {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.4);
-  font-style: italic;
-  font-weight: 400;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    font-weight: 400;
 }
 
 #contact-form :-moz-placeholder {
-  /* Firefox 18- */
-  
-  text-align: center;
-  color: rgba(255, 255, 255, 0.4);
-  font-style: italic;
-  font-weight: 400;
+    /* Firefox 18- */
+
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    font-weight: 400;
 }
 
 #contact-form ::-moz-placeholder {
-  /* Firefox 19+ */
-  
-  text-align: center;
-  color: rgba(255, 255, 255, 0.4);
-  font-style: italic;
-  font-weight: 400;
+    /* Firefox 19+ */
+
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    font-weight: 400;
 }
 
 #contact-form :-ms-input-placeholder {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.4);
-  font-style: italic;
-  font-weight: 400;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    font-weight: 400;
 }
 
 #contact-form .expanding {
-  vertical-align: top;
+    vertical-align: top;
 }
 
 #contact-form .send-icn {
-  fill: rgba(255, 255, 255, 1)
+    fill: rgba(255, 255, 255, 1)
 }
 
 #contact-form .send-icn:hover {
-  fill: rgba(0, 0, 0, 1);
-  cursor: pointer;
+    fill: rgba(0, 0, 0, 1);
+    cursor: pointer;
 }
 
 #contact-form button {
-  background: none;
-  border: none;
-  outline: none;
-  margin: 2vmax;
+    background: none;
+    border: none;
+    outline: none;
+    margin: 2vmax;
 }
 
 #contact-form button:hover small {
-  opacity: 1;
+    opacity: 1;
 }
 
 #contact-form small {
-  display: block;
-  opacity: 0;
+    display: block;
+    opacity: 0;
 }
 
 #contact-form .website {
-  opacity: 1;
-  font-size: 16px;
-  color: white;
-  position: relative;
-  text-align: center;
-  display: block;
-  margin-top: 7%;
+    opacity: 1;
+    font-size: 16px;
+    color: white;
+    position: relative;
+    text-align: center;
+    display: block;
+    margin-top: 7%;
   
 }
 
 #contact-form .website a {
-  color: white;
+    color: white;
+}
+
+#contact-form small{
+    color: #ffffff;
 }

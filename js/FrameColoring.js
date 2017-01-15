@@ -24,8 +24,8 @@ $("section").each(function() {
         .setClassToggle("div #header img", "colorize")
         .addTo(ctrl);
     }
-    
-    /*new ScrollMagic.Scene({
+    /*
+    new ScrollMagic.Scene({
         triggerElement: this
     })
     .addIndicators({
@@ -35,9 +35,9 @@ $("section").each(function() {
         name:name
     }) 
     .addTo(ctrl);
-    */
+     */
 });
-
+   
 /*
 // get window height
 var wh = window.innerHeight;
