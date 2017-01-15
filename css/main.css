@@ -139,7 +139,7 @@ h4{
     overflow: hidden;
     margin: none;
     
-    background-image: url(../images/poli_banner.jpg);
+    background-image: url(../images/illknow8.jpg);
     background-size: cover;
     
     display: flex;
@@ -154,10 +154,29 @@ h4{
 #redden{
     background-color: #ecf0f1;
     width: 90%;
-    height: 100vh;
+    min-height: 100vh;
     padding-right: 5%;
     padding-left: 5%;
     overflow-x: hidden;
+}
+
+#links {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+	text-align: center;
+}
+
+#links a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #2c3e50;
+}
+
+#links a:hover {
+	color: #a0a0a0;
 }
 
 /*POLICY*/
