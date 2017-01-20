@@ -44,21 +44,20 @@
 			window.onload = function(e) {
 				document.getElementById("contact-form").onsubmit = function() {
 				
-					var form = document.getElementById("contact-form");
+					var elem = document.getElementById("contact-form").elements;
 					console.log("onsubmit loaded");
 					var xhr = new XMLHttpRequest();
-					var params = [].filter.call(form.elements, function(el) {
-						//Allow only elements that don't have the 'checked' property
-						//Or those who have it, and it's checked for them.
-						return typeof(el.checked) === 'undefined' || el.checked;
-						//Practically, filter out checkboxes/radios which aren't checekd.
-					})
-					.filter(function(el) { return !!el.name; }) //Nameless elements die.
-					.filter(function(el) { return !el.disabled; }) //Disabled elements die.
-					.map(function(el) {
-						//Map each field into a name=value string, make sure to properly escape!
-						return encodeURIComponent(el.name) + '=' + encodeURIComponent(el.value);
-					}).join('&'); //Then join all the strings by &
+					var params = "";
+					
+					for (var i = 0; i < elem.length; i++) {
+						if (elem[i].tagName == "SELECT") {
+							value = elem[i].options[elem[i].selectedIndex].value;
+						} else {
+							value = elem[i].value;                
+						}
+						params += elem[i].name + "=" + encodeURIComponent(value) + "&";
+					}
+
 					
 					xhr.open("POST", "http://econ.mbhs.edu/mail.php", true);
 					xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
