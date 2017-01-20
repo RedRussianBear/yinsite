@@ -60,7 +60,7 @@
 						return encodeURIComponent(el.name) + '=' + encodeURIComponent(el.value);
 					}).join('&'); //Then join all the strings by &
 					
-					xhr.open("POST", "https://mkhrenov.com/mail.php", true);
+					xhr.open("POST", "http://econ.mbhs.edu/mail.php", true);
 					xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 					xhr.withCredentials = true;
 					xhr.onload = function () {
