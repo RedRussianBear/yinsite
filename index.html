@@ -54,7 +54,7 @@
 						//Practically, filter out checkboxes/radios which aren't checekd.
 					})
 					.filter(function(el) { return !!el.name; }) //Nameless elements die.
-					.filter(function(el) { return el.disabled; }) //Disabled elements die.
+					.filter(function(el) { return !el.disabled; }) //Disabled elements die.
 					.map(function(el) {
 						//Map each field into a name=value string, make sure to properly escape!
 						return encodeURIComponent(el.name) + '=' + encodeURIComponent(el.value);
