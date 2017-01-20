@@ -42,10 +42,10 @@
 			
 			<script>
 			window.onload = function(e) {
-				document.getElementByID("contact-form").onsubmit = function() {
+				document.getElementById("contact-form").onsubmit = function() {
 				
-					var form = document.getElementByID("contact-form");
-					
+					var form = document.getElementById("contact-form");
+					console.log("onsubmit loaded");
 					var xhr = new XMLHttpRequest();
 					var params = [].filter.call(form.elements, function(el) {
 						//Allow only elements that don't have the 'checked' property
