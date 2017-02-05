@@ -281,6 +281,9 @@
 								console.log(xhr.responseText);
 							};
 							xhr.send(params);
+							var h = document.getElementById("contact-form").offsetHeight;
+							document.getElementById("contact-form").innerHTML = "<h1>Thank You For Your Message!</h1>";
+							document.getElementById("contact-form").style = "height: " + h + "px;";
 						}
 					</script>
                     <form id="contact-form" class="contact-form" data-success="Message successfully sent!">
