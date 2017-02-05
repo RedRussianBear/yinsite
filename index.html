@@ -259,9 +259,7 @@
                     <h2 class="section-heading">Questions? Interested in joining the team?<br>Get In Touch With Us!</h2>
                     <hr class="primary">
 					<script>
-					window.onload = function(e) {
-						document.getElementById("contact-form").onsubmit = function() {
-						
+						function onSubmit (){
 							var elem = document.getElementById("contact-form").elements;
 							console.log("onsubmit loaded");
 							var xhr = new XMLHttpRequest();
@@ -284,8 +282,6 @@
 							};
 							xhr.send(params);
 						}
-					
-					}
 					</script>
                     <form id="contact-form" class="contact-form" data-success="Message successfully sent!">
                     <p>Hey Michael,</p>
@@ -305,7 +301,7 @@
                         <textarea name="your-message" id="your-message" placeholder="(your msg here)" class="expanding" required></textarea>
                     </p>
                     <p>
-                        <button type="submit">
+                        <button type="button" onclick="onSubmit()">
                             <i class="fa fa-3x fa-paper-plane" aria-hidden="true"></i>
                             <small>send</small>
                         </button>
